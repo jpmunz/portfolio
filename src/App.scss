@@ -1,0 +1,96 @@
+@import "mixins";
+@import "variables";
+
+.App {
+  .welcome-container {
+    background-color: $white;
+    padding: $space-sm;
+    width: 60%;
+    margin: 5% auto 0;
+    @include rounded();
+    @include box-shadow();
+  }
+
+  .projects-container {
+    position: relative;
+    top: $space-xl;
+    background-color: $white;
+    padding: $space-sm 0;
+    width: 80%;
+    margin: 5% auto 5%;
+    @include rounded();
+    @include box-shadow();
+  }
+
+  .carousel {
+    padding: 0 10%;
+
+    .carousel-indicators {
+      margin-bottom: 0;
+
+      li {
+        background-color: #777;
+      }
+    }
+
+    .carousel-item {
+      header {
+        text-align: center;
+        margin-top: $space-md;
+        margin-bottom: $space-lg;
+      }
+
+      .badges {
+        img {
+          margin: 0 $space-sm;
+        }
+      }
+
+      .screenshot {
+        width: 50%;
+        display: inline;
+        @include rounded();
+
+        &.float-left {
+          margin-right: $space-md;
+          @include box-shadow();
+        }
+
+        &.float-right {
+          margin-left: $space-md;
+          @include box-shadow(-10px, 5px, 10px);
+        }
+      }
+
+      section {
+        height: 650px;
+        overflow-y: auto;
+        margin-bottom: $space-md;
+      }
+
+      .links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+
+        li {
+          margin-bottom: $space-sm;
+        }
+      }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 10%;
+    }
+
+    .carousel-control-prev-icon {
+      background-image: url("./assets/left-arrow.svg");
+    }
+
+    .carousel-control-next-icon {
+      background-image: url("./assets/right-arrow.svg");
+    }
+  }
+}

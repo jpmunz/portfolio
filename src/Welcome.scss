@@ -1,0 +1,53 @@
+@import "variables";
+@import "mixins";
+
+.Welcome {
+  text-align: center;
+
+  .hello {
+    font-size: 3em;
+  }
+
+  .blurb {
+    font-style: italic;
+    margin-top: $space-sm;
+    margin-bottom: $space-md;
+  }
+
+  .calls-to-action {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .name-main {
+    display: inline-block;
+  }
+
+  .face {
+    width: 100px;
+    margin: $space-sm;
+    padding: 2px;
+    border: 1px solid;
+    @include rounded(2em);
+  }
+
+  .name {
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration: underline;
+    text-align: left;
+  }
+
+  .icons {
+    text-align: left;
+    img {
+      width: 20px;
+      margin-right: $space-sm;
+    }
+  }
+
+  .canada {
+    color: #ff0000;
+    opacity: 0.8;
+  }
+}
